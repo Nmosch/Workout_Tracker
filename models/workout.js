@@ -8,16 +8,16 @@ const workoutSchema = new Schema ({
     exercises: [{
         type: {
             type: String,
-            // required: "Select type"
+            required: "Select type"
         },
         name: {
             type: String,
             trim: true,
-            // required: "Please name this exercise"
+            required: "Please name this exercise"
         },
         duration: {
             type: Number,
-            // required: "How long was this exercise?"
+            required: "How long was this exercise?"
         },
         weight: Number,
         reps: Number,
@@ -26,12 +26,12 @@ const workoutSchema = new Schema ({
     }]
 })
 
-workoutSchema.methods.totalDuration = function () {
-    const durationTotal = this.exercises.reduce((accum, cv)=>{
-       return accum + cv.duration
-    }, 0);
-    return durationTotal;
-}
+// workoutSchema.methods.totalDuration = function () {
+//     const durationTotal = this.exercises.reduce((accum, cv)=>{
+//        return accum + cv.duration
+//     }, 0);
+//     return durationTotal;
+// }
 
 const Workout = model ("Workout", workoutSchema);
 

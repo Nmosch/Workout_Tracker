@@ -425,6 +425,10 @@ form > button {
   padding: 10px;
 }
 
+#stats{
+  margin-left: 30px;
+}
+
 @keyframes toast {
   50% {
     opacity: 1;
